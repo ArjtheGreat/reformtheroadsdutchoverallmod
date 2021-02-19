@@ -393,7 +393,7 @@ shared_focus = {
     icon = unkown
 	prerequisite = {focus = HOL_choose_where_to_propose_the_bill  }
 	mutually_exclusive = {
-		focus = HOL_choosing_the_parliament
+		focus = HOL_choosing_the_palace
 	}
     x = -1
     y = 1
