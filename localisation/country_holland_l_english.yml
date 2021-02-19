@@ -94,6 +94,11 @@
     HOL_the_bill_was_rejected_desc:0 ""
     
 
+    HOL_speed_bump_reform_bill:0 "Speed Bump Reform Bill"
+    HOL_speed_bump_reform_bill_desc:0 "Current Support for the Bill is [?HOL_speed_bump_bill_progress]"
+
+    HOL_increase_speed_bump_bill_progress:0 "Increase Speed Bump Bill Progress"
+
 
 
     HOL_reform_the_roads_events.1.t:0 "Reform the Roads"

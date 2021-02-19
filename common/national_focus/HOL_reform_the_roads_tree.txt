@@ -136,7 +136,10 @@ shared_focus = {
 	relative_position_id = HOL_the_drivers_liscence_affair
 	mutually_exclusive = {
 		focus = HOL_the_liscence_was_accepted
-	}
+    }
+    available = {
+        has_country_flag = HOL_drivers_liscence_rejected
+    }
     cost = 10
     available_if_capitulated = yes
     ai_will_do = {
@@ -157,7 +160,10 @@ shared_focus = {
 	relative_position_id = HOL_the_drivers_liscence_affair
 	mutually_exclusive = {
 		focus = HOL_the_liscence_was_rejected
-	}
+    }
+    available = {
+        has_country_flag = HOL_drivers_liscence_accepted
+    }
     cost = 10
     available_if_capitulated = yes
     ai_will_do = {
@@ -195,7 +201,9 @@ shared_focus = {
     x = -1
     y = 1
 	relative_position_id = HOL_start_speed_bump_reforms
-	
+	mutually_exclusive = {
+        focus = HOL_raise_speed_bumps_by_2_inches
+    }
     cost = 10
     available_if_capitulated = yes
     ai_will_do = {
@@ -217,7 +225,9 @@ shared_focus = {
     x = 1
     y = 1
 	relative_position_id = HOL_start_speed_bump_reforms
-	
+	mutually_exclusive = {
+        focus = HOL_raise_speed_bumps_by_1_inch
+    }
     cost = 10
     available_if_capitulated = yes
     ai_will_do = {
@@ -470,6 +480,7 @@ shared_focus = {
     }
     completion_reward = {
         add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
         
@@ -492,6 +503,7 @@ shared_focus = {
     completion_reward = {
         
         add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
     }
@@ -511,6 +523,7 @@ shared_focus = {
     }
     completion_reward = {
 		add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
         
@@ -535,6 +548,7 @@ shared_focus = {
     }
     completion_reward = {
 		add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
         
@@ -556,6 +570,7 @@ shared_focus = {
     }
     completion_reward = {
 		add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
         
@@ -576,6 +591,7 @@ shared_focus = {
     }
     completion_reward = {
 		add_to_variable = {
+            tooltip = HOL_increase_speed_bump_bill_progress
 			HOL_speed_bump_bill_progress = 16.66667
 		}
         

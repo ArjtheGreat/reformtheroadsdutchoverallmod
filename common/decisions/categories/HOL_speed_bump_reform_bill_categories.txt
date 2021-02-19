@@ -5,4 +5,6 @@ HOL_speed_bump_reform_bill = {
     visible = {
         has_completed_focus = HOL_begin_drafting_speedbump_reform_bill
     }
+
+    visible_when_empty = yes
 }
