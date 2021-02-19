@@ -1,0 +1,225 @@
+add_namespace = HOL_reform_the_roads_events
+
+##reform the roads
+country_event = {
+	id = HOL_reform_the_roads_events.1
+	title = HOL_reform_the_roads_events.1.t
+	desc = HOL_reform_the_roads_events.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.1.a
+		
+	}
+}
+
+##loc
+
+##The drivers liscene affar
+country_event = {
+	id = HOL_reform_the_roads_events.2
+	title = HOL_reform_the_roads_events.2.t
+	desc = HOL_reform_the_roads_events.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.2.a
+		set_country_flag = HOL_drivers_liscence_rejected
+    }
+    option = {
+		name = HOL_reform_the_roads_events.2.b
+		set_country_flag = HOL_drivers_liscence_accepted
+	}
+}
+
+##loc
+
+##speed bump reforms
+country_event = {
+	id = HOL_reform_the_roads_events.3
+	title = HOL_reform_the_roads_events.3.t
+	desc = HOL_reform_the_roads_events.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.3.a
+    }
+}
+
+##loc
+
+
+##speedbump reform bill
+country_event = {
+	id = HOL_reform_the_roads_events.4
+	title = HOL_reform_the_roads_events.4.t
+	desc = HOL_reform_the_roads_events.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.4.a
+    }
+}
+
+##loc
+the speedbump reform bill will be the most ambitious thing of our whole presidency! countless tens of lives can be saved with proper speedbump reform!
+
+
+##meeting with lib soc
+country_event = {
+	id = HOL_reform_the_roads_events.5
+	title = HOL_reform_the_roads_events.5.t
+	desc = HOL_reform_the_roads_events.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.5.a
+    }
+}
+
+###meeting with nat soc
+country_event = {
+	id = HOL_reform_the_roads_events.6
+	title = HOL_reform_the_roads_events.6.t
+	desc = HOL_reform_the_roads_events.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.6.a
+    }
+}
+
+###meeting with rad soc
+country_event = {
+	id = HOL_reform_the_roads_events.7
+	title = HOL_reform_the_roads_events.7.t
+	desc = HOL_reform_the_roads_events.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.7.a
+    }
+}
+
+###Meeting with lib
+country_event = {
+	id = HOL_reform_the_roads_events.8
+	title = HOL_reform_the_roads_events.8.t
+	desc = HOL_reform_the_roads_events.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.8.a
+    }
+}
+
+##meeting with fascists
+country_event = {
+	id = HOL_reform_the_roads_events.9
+	title = HOL_reform_the_roads_events.9.t
+	desc = HOL_reform_the_roads_events.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.9.a
+    }
+}
+
+###meeting with communists
+country_event = {
+	id = HOL_reform_the_roads_events.10
+	title = HOL_reform_the_roads_events.10.t
+	desc = HOL_reform_the_roads_events.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.10.a
+    }
+}
+
+
+##where to propose?
+country_event = {
+	id = HOL_reform_the_roads_events.11
+	title = HOL_reform_the_roads_events.11.t
+	desc = HOL_reform_the_roads_events.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.11.a
+    }
+}
+
+###loc
+choosing a place to propose the bill could have serious implications for the future of the dutch State for years to come. If we choose the parliamnent, it acts as an endorsement of Netherlands democratic values. If we choose the palace however, it could come off as a support for absolute monarchy! we must choose carefully
+
+##proposing the bill
+country_event = {
+	id = HOL_reform_the_roads_events.14
+	title = HOL_reform_the_roads_events.12.t
+	desc = HOL_reform_the_roads_events.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.12.a
+    }
+}
+
+##Loc
+Now that we have drafted it and chosen where to propose it, wecan move onto proposing the bill. Hopefully it goes well!
+
+###voting on the bill
+country_event = {
+	id = HOL_reform_the_roads_events.13
+	title = HOL_reform_the_roads_events.13.t
+	desc = HOL_reform_the_roads_events.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+        name = HOL_reform_the_roads_events.13.a
+        
+        random_list = {
+            50 = {
+                country_event = HOL_reform_the_roads_events.14
+			}
+			50 = {
+                country_event = HOL_reform_the_roads_events.15
+            }
+        }
+    }
+}
+
+###loc
+after years upon years of hard work, the time has come for us to vote on the Speed Bump Reform Bill. This could decide the fate of the Netherlands, the fate of the World as we know it. All of previous human accomplishments shall come down to this day, this moment!
+
+##bill passes
+country_event = {
+	id = HOL_reform_the_roads_events.14
+	title = HOL_reform_the_roads_events.14.t
+	desc = HOL_reform_the_roads_events.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.14.a
+		set_country_flag = HOL_road_reform_bill_passes
+    }
+}
+
+##loc
+it has been quite a long time since our road reforms started. but today it comes to a conclusion, as we raise speed bumps 1/2 inches! So many lives will be saved that were stupidly lossed due to the incompetence of previous governments and their inabilities to fix the roads!
+
+##rejected
+country_event = {
+	id = HOL_reform_the_roads_events.15
+	title = HOL_reform_the_roads_events.15.t
+	desc = HOL_reform_the_roads_events.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.15.a
+		set_country_flag = HOL_road_reform_bill_is_rejected
+    }
+}
+
+##loc
+all our hard work. for nothing. lost. down the drain. we failed.

@@ -1,0 +1,37 @@
+ideas = {
+    country = {
+        HOL_speed_bump_reforms = {
+            modifier = {
+                political_power_gain = 0.01
+            }
+        }
+        HOL_speed_bump_reforms_2 = {
+            modifier = {
+                political_power_gain = 0.02
+                stability_factor = -0.01
+            }
+        }
+        HOL_speed_bump_reforms_3 = {
+            modifier = {
+                political_power_gain = 0.03
+                stability_factor = -0.02
+            }
+        }
+
+        HOL_successful_speed_bump_reforms = {
+            modifier = {
+                MONTHLY_POPULATION = 0.003
+                stability_factor = 0.01
+            }
+        }
+        HOL_failed_speed_bump_reforms = {
+            modifier = {
+                political_power_gain = -0.01
+                stability_factor = -0.01
+            }
+        }
+        
+    }
+}
+
+

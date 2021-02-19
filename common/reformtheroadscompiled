@@ -1,0 +1,940 @@
+focus_tree = {
+	id = HOL_reform_the_roads_tree
+	country = {
+        factor = 0
+        modifier = {
+            tag = HOL
+            add = 12
+        }
+	}
+	shared_focus = HOL_reform_the_roads
+}
+
+shared_focus = {
+    id = HOL_reform_the_roads
+    icon = unkown
+    x = 0
+    y = 0
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_stability = 0.02
+        country_event =  HOL_reform_the_roads_events.1
+    }
+}
+
+shared_focus = {
+    id = HOL_lower_the_driving_age_to_16_years_old
+    icon = unkown
+    prerequisite = {focus = HOL_reform_the_roads  }
+    x = -1
+    y = 1
+    relative_position_id = HOL_reform_the_roads
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+		add_stability = -0.02
+		add_political_power = 20
+		
+    }
+}
+
+shared_focus = {
+    id = HOL_promise_to_lower_the_age_of_driving_to_15_years_old_when_getting_elected
+    icon = unkown
+    prerequisite = {focus = HOL_lower_the_driving_age_to_16_years_old  }
+    x = 0
+    y = 1
+    relative_position_id = HOL_lower_the_driving_age_to_16_years_old
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_popularity = {
+			ideology = current_party_ideology_group
+			popularity = 0.01
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_begin_lowering_speeds_by_1_MPH
+    icon = unkown
+    prerequisite = {focus = HOL_reform_the_roads  }
+    x = 1
+    y = 1
+    relative_position_id = HOL_reform_the_roads
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+		add_stability = 0.01
+		add_political_power = -10
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_continue_lowering_speeds_by_1_MPH
+    icon = unkown
+    prerequisite = {focus = HOL_begin_lowering_speeds_by_1_MPH  }
+    x = 0
+    y = 1
+    relative_position_id = HOL_begin_lowering_speeds_by_1_MPH
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_stability = 0.01
+		add_political_power = -10
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_the_drivers_liscence_affair
+    icon = unkown
+	prerequisite = {focus = HOL_continue_lowering_speeds_by_1_MPH  }
+	prerequisite = {
+		focus = HOL_promise_to_lower_the_age_of_driving_to_15_years_old_when_getting_elected
+	}
+    x = 1
+    y = 1
+    relative_position_id = HOL_promise_to_lower_the_age_of_driving_to_15_years_old_when_getting_elected
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        country_event = HOL_reform_the_roads_events.2
+    }
+}
+
+shared_focus = {
+    id = HOL_the_liscence_was_rejected
+    icon = unkown
+    prerequisite = {focus = HOL_the_drivers_liscence_affair  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_the_drivers_liscence_affair
+	mutually_exclusive = {
+		focus = HOL_the_liscence_was_accepted
+	}
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_political_power = 20
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_the_liscence_was_accepted
+    icon = unkown
+    prerequisite = {focus = HOL_the_drivers_liscence_affair  }
+    x = 1
+    y = 1
+	relative_position_id = HOL_the_drivers_liscence_affair
+	mutually_exclusive = {
+		focus = HOL_the_liscence_was_rejected
+	}
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        add_stability = 0.02
+    }
+}
+
+shared_focus = {
+    id = HOL_start_speed_bump_reforms
+    icon = unkown
+    prerequisite = {focus = HOL_the_liscence_was_accepted focus = HOL_the_liscence_was_rejected }
+    x = -1
+    y = 1
+	relative_position_id = HOL_the_liscence_was_accepted
+
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_ideas = HOL_speed_bump_reforms
+        country_event = HOL_reform_the_roads_events.3
+    }
+}
+
+shared_focus = {
+    id = HOL_raise_speed_bumps_by_1_inch
+    icon = unkown
+    prerequisite = {focus = HOL_start_speed_bump_reforms  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_start_speed_bump_reforms
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        swap_ideas = {
+			add_idea = HOL_speed_bump_reforms_2
+			remove_idea = HOL_speed_bump_reforms
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_raise_speed_bumps_by_2_inches
+    icon = unkown
+    prerequisite = {focus = HOL_start_speed_bump_reforms  }
+    x = 1
+    y = 1
+	relative_position_id = HOL_start_speed_bump_reforms
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        swap_ideas = {
+			add_idea = HOL_speed_bump_reforms_3
+			remove_idea = HOL_speed_bump_reforms
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_begin_drafting_speedbump_reform_bill
+    icon = unkown
+    prerequisite = {focus = HOL_raise_speed_bumps_by_2_inches focus = HOL_raise_speed_bumps_by_1_inch  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_raise_speed_bumps_by_2_inches
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        ##event for the speedbump reform
+        country_event = HOL_reform_the_roads_events.4
+    }
+}
+
+
+
+shared_focus = {
+    id = HOL_meet_with_liberatarian_socialists
+    icon = unkown
+    prerequisite = {focus = HOL_begin_drafting_speedbump_reform_bill  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_begin_drafting_speedbump_reform_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        country_event = HOL_reform_the_roads_events.5
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_meeting_with_national_socialists
+    icon = unkown
+    prerequisite = {focus = HOL_meet_with_liberatarian_socialists  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_meet_with_liberatarian_socialists
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        country_event = HOL_reform_the_roads_events.6
+        
+    }
+}
+shared_focus = {
+    id = HOL_meeting_with_radical_socialists
+    icon = unkown
+    prerequisite = {focus = HOL_meeting_with_national_socialists  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_meeting_with_national_socialists
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        country_event = HOL_reform_the_roads_events.7
+    }
+}
+
+
+
+
+shared_focus = {
+    id = HOL_meeting_with_libertarians
+    icon = unkown
+    prerequisite = {focus = HOL_begin_drafting_speedbump_reform_bill  }
+    x = 1
+    y = 1
+	relative_position_id = HOL_begin_drafting_speedbump_reform_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        country_event = HOL_reform_the_roads_events.8
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_meeting_with_fascists
+    icon = unkown
+    prerequisite = {focus = HOL_meeting_with_libertarians  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_meeting_with_libertarians
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        country_event = HOL_reform_the_roads_events.9
+        
+    }
+}
+shared_focus = {
+    id = HOL_meeting_with_communists
+    icon = unkown
+    prerequisite = {focus = HOL_meeting_with_fascists  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_meeting_with_fascists
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        country_event = HOL_reform_the_roads_events.10
+        
+    }
+}
+shared_focus = {
+    id = HOL_choose_where_to_propose_the_bill
+    icon = unkown
+	prerequisite = {focus = HOL_meeting_with_communists  }
+	prerequisite = {
+		focus = HOL_meeting_with_radical_socialists
+	}
+    x = -1
+    y = 1
+	relative_position_id = HOL_meeting_with_communists
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        country_event = HOL_reform_the_roads_events.11
+    }
+}
+shared_focus = {
+    id = HOL_choosing_the_parliament
+    icon = unkown
+	prerequisite = {focus = HOL_choose_where_to_propose_the_bill  }
+	mutually_exclusive = {
+		focus = HOL_choosing_the_parliament
+	}
+    x = -1
+    y = 1
+	relative_position_id = HOL_choose_where_to_propose_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        add_popularity = {
+			ideology = current_party_ideology_group
+			popularity = 0.01
+		}
+    }
+}
+shared_focus = {
+    id = HOL_choosing_the_palace
+    icon = unkown
+	prerequisite = {focus = HOL_choose_where_to_propose_the_bill  }
+	mutually_exclusive = {
+		focus = HOL_choosing_the_parliament
+	}
+    x = 1
+    y = 1
+	relative_position_id = HOL_choose_where_to_propose_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_popularity = {
+			ideology = neutrality
+			popularity = 0.01
+		}
+        
+    }
+}
+shared_focus = {
+    id = HOL_proposing_the_bill
+    icon = unkown
+	prerequisite = {focus = HOL_choosing_the_palace  focus = HOL_choosing_the_parliament }
+	
+    x = -1
+    y = 1
+	relative_position_id = HOL_choosing_the_palace
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        unlock_decision_category_tooltip = HOL_speed_bump_reform_bill
+        ##event
+    }
+}
+shared_focus = {
+    id = HOL_encouraging_liberatarian_socialists_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_proposing_the_bill  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_proposing_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_encouraging_national_socialists_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_encouraging_liberatarian_socialists_to_vote_for_the_bill  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_encouraging_liberatarian_socialists_to_vote_for_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+        add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+    }
+}
+shared_focus = {
+    id = HOL_encouraging_radical_socialists_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_encouraging_national_socialists_to_vote_for_the_bill  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_encouraging_national_socialists_to_vote_for_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+		add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+        
+    }
+}
+
+
+
+
+shared_focus = {
+    id = HOL_encouraging_libertarians_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_proposing_the_bill  }
+    x = 1
+    y = 1
+	relative_position_id = HOL_proposing_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+		add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_encouraging_fascists_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_encouraging_libertarians_to_vote_for_the_bill  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_encouraging_libertarians_to_vote_for_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+		add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+        
+    }
+}
+shared_focus = {
+    id = HOL_encouraging_communists_to_vote_for_the_bill
+    icon = unkown
+    prerequisite = {focus = HOL_encouraging_fascists_to_vote_for_the_bill  }
+    x = 0
+    y = 1
+	relative_position_id = HOL_encouraging_fascists_to_vote_for_the_bill
+	
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+		add_to_variable = {
+			HOL_speed_bump_bill_progress = 16.66667
+		}
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_voting_on_the_bill
+    icon = unkown
+	prerequisite = {focus = HOL_encouraging_communists_to_vote_for_the_bill  }
+	prerequisite = {
+		focus = HOL_encouraging_radical_socialists_to_vote_for_the_bill
+	}
+    x = -1
+    y = 1
+	relative_position_id = HOL_encouraging_communists_to_vote_for_the_bill
+	available = {
+		custom_trigger_tooltip = {
+		tooltip = HOL_speed_bump_bill_progress_greater_than_99
+		check_variable = { HOL_speed_bump_bill_progress > 99  }
+		}
+	}
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        ##event
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_the_bill_was_passed
+    icon = unkown
+	prerequisite = {focus = HOL_voting_on_the_bill  }
+    x = -1
+    y = 1
+	relative_position_id = HOL_voting_on_the_bill
+	mutually_exclusive = {
+		focus = HOL_the_bill_was_rejected
+	}
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        add_ideas = HOL_successful_speed_bump_reforms
+        
+    }
+}
+
+shared_focus = {
+    id = HOL_the_bill_was_rejected
+    icon = unkown
+	prerequisite = {focus = HOL_voting_on_the_bill  }
+    x = 1
+    y = 1
+	relative_position_id = HOL_voting_on_the_bill
+	mutually_exclusive = {
+		focus = HOL_the_bill_was_passed
+	}
+    cost = 10
+    available_if_capitulated = yes
+    ai_will_do = {
+        factor = 1
+    }
+    completion_reward = {
+        
+		add_ideas = HOL_failed_speed_bump_reforms
+    }
+}
+
+
+###ideas file
+ideas = {
+    country = {
+        HOL_speed_bump_reforms = {
+            modifier = {
+                political_power_gain = 0.01
+            }
+        }
+        HOL_speed_bump_reforms_2 = {
+            modifier = {
+                political_power_gain = 0.02
+                stability_factor = -0.01
+            }
+        }
+        HOL_speed_bump_reforms_3 = {
+            modifier = {
+                political_power_gain = 0.03
+                stability_factor = -0.02
+            }
+        }
+
+        HOL_successful_speed_bump_reforms = {
+            modifier = {
+                MONTHLY_POPULATION = 0.003
+                stability_factor = 0.01
+            }
+        }
+        HOL_failed_speed_bump_reforms = {
+            modifier = {
+                political_power_gain = -0.01
+                stability_factor = -0.01
+            }
+        }
+        
+    }
+}
+
+
+
+
+##decision and decision cat
+HOL_speed_bump_reform_bill = {
+
+}
+
+HOL_speed_bump_reform_bill = {
+    allowed = {
+        tag = HOL
+    }
+    visible = {
+        has_completed_focus = HOL_begin_drafting_speedbump_reform_bill
+    }
+}
+
+
+
+
+###event
+
+add_namespace = HOL_reform_the_roads_events
+
+##reform the roads
+country_event = {
+	id = HOL_reform_the_roads_events.1
+	title = HOL_reform_the_roads_events.1.t
+	desc = HOL_reform_the_roads_events.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.1.a
+		
+	}
+}
+
+##loc
+Our road laws are in a very bad shape. It should be our type priority, even if it is not fun at all because this is how real life politics is and we are not in a fun simulation game based around WW2.
+
+##The drivers liscene affar
+country_event = {
+	id = HOL_reform_the_roads_events.2
+	title = HOL_reform_the_roads_events.2.t
+	desc = HOL_reform_the_roads_events.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.2.a
+		set_country_flag = HOL_drivers_liscence_rejected
+    }
+    option = {
+		name = HOL_reform_the_roads_events.2.b
+		set_country_flag = HOL_drivers_liscence_accepted
+	}
+}
+
+##loc
+Today a boy claiming to be 17 was caught driving on the streets of Rotterdam. However, the policeman who caught him says he is obviously not 17, citing a lack of a beard and chest hair. What should we do?
+
+##speed bump reforms
+country_event = {
+	id = HOL_reform_the_roads_events.3
+	title = HOL_reform_the_roads_events.3.t
+	desc = HOL_reform_the_roads_events.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.3.a
+    }
+}
+
+##loc
+our speed bumps are in poor shape. we must ammend this and begin meeting with people of all ideologies to fix this.
+
+
+##speedbump reform bill
+country_event = {
+	id = HOL_reform_the_roads_events.4
+	title = HOL_reform_the_roads_events.4.t
+	desc = HOL_reform_the_roads_events.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.4.a
+    }
+}
+
+##loc
+the speedbump reform bill will be the most ambitious thing of our whole presidency! countless tens of lives can be saved with proper speedbump reform!
+
+
+##meeting with lib soc
+country_event = {
+	id = HOL_reform_the_roads_events.5
+	title = HOL_reform_the_roads_events.5.t
+	desc = HOL_reform_the_roads_events.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.5.a
+    }
+}
+
+###meeting with nat soc
+country_event = {
+	id = HOL_reform_the_roads_events.6
+	title = HOL_reform_the_roads_events.6.t
+	desc = HOL_reform_the_roads_events.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.6.a
+    }
+}
+
+###meeting with rad soc
+country_event = {
+	id = HOL_reform_the_roads_events.7
+	title = HOL_reform_the_roads_events.7.t
+	desc = HOL_reform_the_roads_events.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.7.a
+    }
+}
+
+###Meeting with lib
+country_event = {
+	id = HOL_reform_the_roads_events.8
+	title = HOL_reform_the_roads_events.8.t
+	desc = HOL_reform_the_roads_events.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.8.a
+    }
+}
+
+##meeting with fascists
+country_event = {
+	id = HOL_reform_the_roads_events.9
+	title = HOL_reform_the_roads_events.9.t
+	desc = HOL_reform_the_roads_events.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.9.a
+    }
+}
+
+###meeting with communists
+country_event = {
+	id = HOL_reform_the_roads_events.10
+	title = HOL_reform_the_roads_events.10.t
+	desc = HOL_reform_the_roads_events.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.10.a
+    }
+}
+
+
+##where to propose?
+country_event = {
+	id = HOL_reform_the_roads_events.11
+	title = HOL_reform_the_roads_events.11.t
+	desc = HOL_reform_the_roads_events.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.11.a
+    }
+}
+
+###loc
+choosing a place to propose the bill could have serious implications for the future of the dutch State for years to come. If we choose the parliamnent, it acts as an endorsement of Netherlands democratic values. If we choose the palace however, it could come off as a support for absolute monarchy! we must choose carefully
+
+##proposing the bill
+country_event = {
+	id = HOL_reform_the_roads_events.14
+	title = HOL_reform_the_roads_events.12.t
+	desc = HOL_reform_the_roads_events.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.12.a
+    }
+}
+
+##Loc
+Now that we have drafted it and chosen where to propose it, wecan move onto proposing the bill. Hopefully it goes well!
+
+###voting on the bill
+country_event = {
+	id = HOL_reform_the_roads_events.13
+	title = HOL_reform_the_roads_events.13.t
+	desc = HOL_reform_the_roads_events.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+        name = HOL_reform_the_roads_events.13.a
+        
+        random_list = {
+            50 = {
+                country_event = HOL_reform_the_roads_events.14
+			}
+			50 = {
+                country_event = HOL_reform_the_roads_events.15
+            }
+        }
+    }
+}
+
+###loc
+after years upon years of hard work, the time has come for us to vote on the Speed Bump Reform Bill. This could decide the fate of the Netherlands, the fate of the World as we know it. All of previous human accomplishments shall come down to this day, this moment!
+
+##bill passes
+country_event = {
+	id = HOL_reform_the_roads_events.14
+	title = HOL_reform_the_roads_events.14.t
+	desc = HOL_reform_the_roads_events.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.14.a
+		set_country_flag = HOL_road_reform_bill_passes
+    }
+}
+
+##loc
+it has been quite a long time since our road reforms started. but today it comes to a conclusion, as we raise speed bumps 1/2 inches! So many lives will be saved that were stupidly lossed due to the incompetence of previous governments and their inabilities to fix the roads!
+
+##rejected
+country_event = {
+	id = HOL_reform_the_roads_events.15
+	title = HOL_reform_the_roads_events.15.t
+	desc = HOL_reform_the_roads_events.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = HOL_reform_the_roads_events.15.a
+		set_country_flag = HOL_road_reform_bill_is_rejected
+    }
+}
+
+##loc
+all our hard work. for nothing. lost. down the drain. we failed.
