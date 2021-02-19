@@ -118,4 +118,53 @@
     HOL_reform_the_roads_events.4.d:0 "the speedbump reform bill will be the most ambitious thing of our whole presidency! countless tens of lives can be saved with proper speedbump reform!"
     HOL_reform_the_roads_events.4.a:0 "Le bruh"
 
-    
+    HOL_reform_the_roads_events.5.t:0 "Meeting With Libertarian Socialists"
+    HOL_reform_the_roads_events.5.d:0 ""
+    HOL_reform_the_roads_events.5.a:0 ""
+
+    HOL_reform_the_roads_events.6.t:0 "Meeting With National Socialists"
+    HOL_reform_the_roads_events.6.d:0 ""
+    HOL_reform_the_roads_events.6.a:0 ""
+
+    HOL_reform_the_roads_events.7.t:0 "Meeting With Radical Socialists"
+    HOL_reform_the_roads_events.7.d:0 ""
+    HOL_reform_the_roads_events.7.a:0 ""
+
+    HOL_reform_the_roads_events.8.t:0 "Meeting With Libertarians"
+    HOL_reform_the_roads_events.8.d:0 ""
+    HOL_reform_the_roads_events.8.a:0 ""
+
+    HOL_reform_the_roads_events.9.t:0 "Meeting With Fascists"
+    HOL_reform_the_roads_events.9.d:0 ""
+    HOL_reform_the_roads_events.9.a:0 ""
+
+    HOL_reform_the_roads_events.10.t:0 "Meeting With Communists"
+    HOL_reform_the_roads_events.10.d:0 ""
+    HOL_reform_the_roads_events.10.a:0 ""
+
+    HOL_reform_the_roads_events.11.t:0 "Where To Propose The Bill?"
+    HOL_reform_the_roads_events.11.d:0 "choosing a place to propose the bill could have serious implications for the future of the dutch State for years to come. If we choose the parliamnent, it acts as an endorsement of Netherlands democratic values. If we choose the palace however, it could come off as a support for absolute monarchy! we must choose carefully"
+    HOL_reform_the_roads_events.11.a:0 "Yes!"
+
+    HOL_reform_the_roads_events.12.t:0 "Proposing The Bill"
+    HOL_reform_the_roads_events.12.d:0 "Now that we have drafted it and chosen where to propose it, we can move onto proposing the bill. Hopefully it goes well!"
+    HOL_reform_the_roads_events.12.a:0 "Hopefully..."
+
+    HOL_reform_the_roads_events.13.t:0 "The Vote"
+    HOL_reform_the_roads_events.13.d:0 "After years upon years of hard work, the time has come for us to vote on the Speed Bump Reform Bill. This could decide the fate of the Netherlands, the fate of the World as we know it. All of previous human accomplishments shall come down to this day, this moment!"
+    HOL_reform_the_roads_events.13.a:0 "We shall see!"
+
+    HOL_reform_the_roads_events.14.t:0 "The Bill Passes!"
+    HOL_reform_the_roads_events.14.d:0 "It has been quite a long time since our road reforms started. but today it comes to a conclusion, as we raise speed bumps 1/2 inches! So many lives will be saved that were stupidly lost due to the incompetence of previous governments and their inabilities to fix the roads!"
+    HOL_reform_the_roads_events.14.a:0 "POG"
+
+    HOL_reform_the_roads_events.15.t:0 "The Bill Is Rejected!"
+    HOL_reform_the_roads_events.15.d:0 "All our hard work. For nothing. Lost. Down the Drain. We failed."
+    HOL_reform_the_roads_events.15.a:0 "Nooooo"
+
+    HOL_speed_bump_reforms:0 "Speed Bump Reforms"
+    HOL_speed_bump_reforms_2:0 "Speed Bump Reforms"
+    HOL_speed_bump_reforms_3:0 "Speed Bump Reforms"
+
+    HOL_successful_speed_bump_reforms:0 "Road Reforms Successful!"
+    HOL_failed_speed_bump_reforms:0 "Road Reforms Fail!"

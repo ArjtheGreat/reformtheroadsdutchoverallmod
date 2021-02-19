@@ -463,6 +463,8 @@ shared_focus = {
     completion_reward = {
         unlock_decision_category_tooltip = HOL_speed_bump_reform_bill
         ##event
+
+        country_event = HOL_reform_the_roads_events.12
     }
 }
 shared_focus = {
@@ -621,7 +623,7 @@ shared_focus = {
     }
     completion_reward = {
         ##event
-        
+        country_event = HOL_reform_the_roads_events.13
     }
 }
 
